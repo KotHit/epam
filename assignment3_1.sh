@@ -20,10 +20,16 @@ while [ $i -lt $count ]; do		#while i<count
 done					#end while
 
 echo "Loop UNTILE"
-i=0
-count=$((count-1))			#array start from [0]
-until [ $count -lt $i ]; do		#iteration while true count<i
-	echo "This is number ${array[$count]}"
-	((count--))
-done					end until
+
+i=1
+until [ $i -gt $# ]
+do echo "This is number ${!i}"
+i=$((i+1))
+done
+#i=0
+#count=$((count-1))			#array start from [0]
+#until [ $count -lt $i ]; do		#iteration while true count<i
+#	echo "This is number ${array[$count]}"
+#	((count--))
+#done					end until
 #exit 0
